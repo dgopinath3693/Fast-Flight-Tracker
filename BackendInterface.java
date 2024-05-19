@@ -3,12 +3,6 @@ import java.io.IOException;
 
 public interface BackendInterface {
 
-  /*
-   * Constructs a BackendInterface with GraphADT instance.
-   *
-   * @param graph GraphADT instance
-   */
-  //BackendInterface(GraphADT graph);
 
   /**
    * Reads data from given file
