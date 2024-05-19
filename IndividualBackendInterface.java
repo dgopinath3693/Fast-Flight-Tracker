@@ -4,12 +4,6 @@ import java.util.List;
 
 public interface IndividualBackendInterface {
 
-    /**
-     * Constructs a BackendInterface with GraphADT instance.
-     *
-     * @param graph GraphADT instance
-     */
-    //BackendInterface(GraphADT graph);
 
     /**
      * Reads data from given file
