@@ -3,11 +3,6 @@ import java.io.IOException;
 
 public interface FrontendInterface {
 
-  /*
-   * Constructor that accepts a reference to the backend and a java.util.Scanner
-   * instance to read user input.
-   */
-  // FrontendInterface(Scanner scanner, BackendInterface backend)
 
   /**
    * specify and load a data file
