@@ -1,20 +1,9 @@
-// --== CS400 File Header Information ==--
-// Name: Diya Gopinath
-// Email: dgopinath2@wisc.edu
-// Group and Team: E08
-// Group TA: Aydan Bailey
-// Lecturer: Gary Dahl
-// Notes to Grader: <optional extra notes>
 
 import java.util.PriorityQueue;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
-// import org.junit.jupiter.api.Test;
-// import org.junit.jupiter.api.Assertions;
 
-// import static org.junit.jupiter.api.Assertions.assertEquals;
-// import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * This class extends the BaseGraph data structure with additional methods for
@@ -240,212 +229,212 @@ public class DijkstraGraph<NodeType, EdgeType extends Number>
         return currentNode.cost;
     }
 
-    // /**
-    //  * This method tests that the computeShortestPath() method returns
-    //  * a searchNode with the correct shortest path, from gary's lecture
-    //  * 
-    //  * The start node being tested is D, the end node being tested is I
-    //  */
-    // @Test
-    // public void test1() {
+    /**
+     * This method tests that the computeShortestPath() method returns
+     * a searchNode with the correct shortest path, from gary's lecture
+     * 
+     * The start node being tested is D, the end node being tested is I
+     */
+    @Test
+    public void test1() {
 
-    //     // PlaceholderMap<String, Node> placeholderMap = new PlaceholderMap<>();
-    //     DijkstraGraph<String, Integer> djikstra = new DijkstraGraph<>(new PlaceholderMap<>());
+        // PlaceholderMap<String, Node> placeholderMap = new PlaceholderMap<>();
+        DijkstraGraph<String, Integer> djikstra = new DijkstraGraph<>(new PlaceholderMap<>());
 
-    //     // adding all the nodes in graph
-    //     djikstra.insertNode("A");
-    //     djikstra.insertNode("B");
-    //     djikstra.insertNode("D");
-    //     djikstra.insertNode("E");
-    //     djikstra.insertNode("F");
-    //     djikstra.insertNode("G");
-    //     djikstra.insertNode("H");
-    //     djikstra.insertNode("I");
-    //     djikstra.insertNode("L");
-    //     djikstra.insertNode("M");
+        // adding all the nodes in graph
+        djikstra.insertNode("A");
+        djikstra.insertNode("B");
+        djikstra.insertNode("D");
+        djikstra.insertNode("E");
+        djikstra.insertNode("F");
+        djikstra.insertNode("G");
+        djikstra.insertNode("H");
+        djikstra.insertNode("I");
+        djikstra.insertNode("L");
+        djikstra.insertNode("M");
 
-    //     // adding all edges between each node in the graph
-    //     djikstra.insertEdge("A", "B", 1);
-    //     djikstra.insertEdge("A", "M", 5);
-    //     djikstra.insertEdge("A", "H", 8);
-    //     djikstra.insertEdge("B", "M", 3);
-    //     djikstra.insertEdge("B", "E", 10);
-    //     djikstra.insertEdge("D", "A", 7);
-    //     djikstra.insertEdge("F", "G", 9);
-    //     djikstra.insertEdge("G", "L", 7);
-    //     djikstra.insertEdge("H", "B", 6);
-    //     djikstra.insertEdge("H", "I", 2);
-    //     djikstra.insertEdge("I", "H", 2);
-    //     djikstra.insertEdge("I", "D", 1);
-    //     djikstra.insertEdge("I", "L", 5);
-    //     djikstra.insertEdge("M", "E", 3);
-    //     djikstra.insertEdge("M", "F", 4);
+        // adding all edges between each node in the graph
+        djikstra.insertEdge("A", "B", 1);
+        djikstra.insertEdge("A", "M", 5);
+        djikstra.insertEdge("A", "H", 8);
+        djikstra.insertEdge("B", "M", 3);
+        djikstra.insertEdge("B", "E", 10);
+        djikstra.insertEdge("D", "A", 7);
+        djikstra.insertEdge("F", "G", 9);
+        djikstra.insertEdge("G", "L", 7);
+        djikstra.insertEdge("H", "B", 6);
+        djikstra.insertEdge("H", "I", 2);
+        djikstra.insertEdge("I", "H", 2);
+        djikstra.insertEdge("I", "D", 1);
+        djikstra.insertEdge("I", "L", 5);
+        djikstra.insertEdge("M", "E", 3);
+        djikstra.insertEdge("M", "F", 4);
 
-    //     // Testing that the end node is correct, as well as the predecessors of the
-    //     // returned end node
-    //     assertEquals("I", djikstra.computeShortestPath("D", "I").node.data, "The predecessor is not correct");
-    //     assertEquals("H", djikstra.computeShortestPath("D", "I").predecessor.node.data,
-    //             "The predecessor is not correct");
-    //     assertEquals("A", djikstra.computeShortestPath("D", "I").predecessor.predecessor.node.data,
-    //             "The predecessor is not correct");
-    //     assertEquals("D", djikstra.computeShortestPath("D", "I").predecessor.predecessor.predecessor.node.data,
-    //             "The predecessor is not correct");
+        // Testing that the end node is correct, as well as the predecessors of the
+        // returned end node
+        assertEquals("I", djikstra.computeShortestPath("D", "I").node.data, "The predecessor is not correct");
+        assertEquals("H", djikstra.computeShortestPath("D", "I").predecessor.node.data,
+                "The predecessor is not correct");
+        assertEquals("A", djikstra.computeShortestPath("D", "I").predecessor.predecessor.node.data,
+                "The predecessor is not correct");
+        assertEquals("D", djikstra.computeShortestPath("D", "I").predecessor.predecessor.predecessor.node.data,
+                "The predecessor is not correct");
 
-    // }
+    }
 
-    // /**
-    //  * This method tests that the shortestPathData() method returns
-    //  * the actual shortest path between two nodes in the djikstra graph.
-    //  * 
-    //  * The start node being tested is D, the end node being tested is I
-    //  */
-    // @Test
-    // public void test2() {
-    //     DijkstraGraph<String, Integer> djikstra = new DijkstraGraph<>(new PlaceholderMap<>());
+    /**
+     * This method tests that the shortestPathData() method returns
+     * the actual shortest path between two nodes in the djikstra graph.
+     * 
+     * The start node being tested is D, the end node being tested is I
+     */
+    @Test
+    public void test2() {
+        DijkstraGraph<String, Integer> djikstra = new DijkstraGraph<>(new PlaceholderMap<>());
 
-    //     // adding all the nodes in graph
-    //     djikstra.insertNode("A");
-    //     djikstra.insertNode("B");
-    //     djikstra.insertNode("D");
-    //     djikstra.insertNode("E");
-    //     djikstra.insertNode("F");
-    //     djikstra.insertNode("G");
-    //     djikstra.insertNode("H");
-    //     djikstra.insertNode("I");
-    //     djikstra.insertNode("L");
-    //     djikstra.insertNode("M");
+        // adding all the nodes in graph
+        djikstra.insertNode("A");
+        djikstra.insertNode("B");
+        djikstra.insertNode("D");
+        djikstra.insertNode("E");
+        djikstra.insertNode("F");
+        djikstra.insertNode("G");
+        djikstra.insertNode("H");
+        djikstra.insertNode("I");
+        djikstra.insertNode("L");
+        djikstra.insertNode("M");
 
-    //     // adding all edges between each node in the graph
-    //     djikstra.insertEdge("A", "B", 1);
-    //     djikstra.insertEdge("A", "M", 5);
-    //     djikstra.insertEdge("A", "H", 8);
-    //     djikstra.insertEdge("B", "M", 3);
-    //     djikstra.insertEdge("B", "E", 10);
-    //     djikstra.insertEdge("D", "A", 7);
-    //     djikstra.insertEdge("F", "G", 9);
-    //     djikstra.insertEdge("G", "L", 7);
-    //     djikstra.insertEdge("H", "B", 6);
-    //     djikstra.insertEdge("H", "I", 2);
-    //     djikstra.insertEdge("I", "H", 2);
-    //     djikstra.insertEdge("I", "D", 1);
-    //     djikstra.insertEdge("I", "L", 5);
-    //     djikstra.insertEdge("M", "E", 3);
-    //     djikstra.insertEdge("M", "F", 4);
+        // adding all edges between each node in the graph
+        djikstra.insertEdge("A", "B", 1);
+        djikstra.insertEdge("A", "M", 5);
+        djikstra.insertEdge("A", "H", 8);
+        djikstra.insertEdge("B", "M", 3);
+        djikstra.insertEdge("B", "E", 10);
+        djikstra.insertEdge("D", "A", 7);
+        djikstra.insertEdge("F", "G", 9);
+        djikstra.insertEdge("G", "L", 7);
+        djikstra.insertEdge("H", "B", 6);
+        djikstra.insertEdge("H", "I", 2);
+        djikstra.insertEdge("I", "H", 2);
+        djikstra.insertEdge("I", "D", 1);
+        djikstra.insertEdge("I", "L", 5);
+        djikstra.insertEdge("M", "E", 3);
+        djikstra.insertEdge("M", "F", 4);
 
-    //     List<String> shortestPath = new ArrayList<String>();
-    //     shortestPath.add("D");
-    //     shortestPath.add("A");
-    //     shortestPath.add("H");
-    //     shortestPath.add("I");
+        List<String> shortestPath = new ArrayList<String>();
+        shortestPath.add("D");
+        shortestPath.add("A");
+        shortestPath.add("H");
+        shortestPath.add("I");
 
-    //     assertEquals(shortestPath, djikstra.shortestPathData("D", "I"), "The shortest path was not as expected");
+        assertEquals(shortestPath, djikstra.shortestPathData("D", "I"), "The shortest path was not as expected");
 
-    // }
+    }
 
-    // /**
-    //  * This method tests that the shortestPathCost() method returns
-    //  * the cost of the shortest path between two nodes in the djikstra graph.
-    //  * 
-    //  * The start node being tested is D, the end node being tested is I
-    //  */
-    // @Test
-    // public void test3() {
-    //     // Create an instance of DijkstraGraph using the PlaceholderMap
-    //     DijkstraGraph<String, Integer> djikstra = new DijkstraGraph<>(new PlaceholderMap<>());
+    /**
+     * This method tests that the shortestPathCost() method returns
+     * the cost of the shortest path between two nodes in the djikstra graph.
+     * 
+     * The start node being tested is D, the end node being tested is I
+     */
+    @Test
+    public void test3() {
+        // Create an instance of DijkstraGraph using the PlaceholderMap
+        DijkstraGraph<String, Integer> djikstra = new DijkstraGraph<>(new PlaceholderMap<>());
 
-    //     // gary lecture example graph
-    //     // adding all the nodes in graph
-    //     djikstra.insertNode("A");
-    //     djikstra.insertNode("B");
-    //     djikstra.insertNode("D");
-    //     djikstra.insertNode("E");
-    //     djikstra.insertNode("F");
-    //     djikstra.insertNode("G");
-    //     djikstra.insertNode("H");
-    //     djikstra.insertNode("I");
-    //     djikstra.insertNode("L");
-    //     djikstra.insertNode("M");
+        // gary lecture example graph
+        // adding all the nodes in graph
+        djikstra.insertNode("A");
+        djikstra.insertNode("B");
+        djikstra.insertNode("D");
+        djikstra.insertNode("E");
+        djikstra.insertNode("F");
+        djikstra.insertNode("G");
+        djikstra.insertNode("H");
+        djikstra.insertNode("I");
+        djikstra.insertNode("L");
+        djikstra.insertNode("M");
 
-    //     // adding all edges between each node in the graph
-    //     djikstra.insertEdge("A", "B", 1);
-    //     djikstra.insertEdge("A", "M", 5);
-    //     djikstra.insertEdge("A", "H", 8);
-    //     djikstra.insertEdge("B", "M", 3);
-    //     djikstra.insertEdge("B", "E", 10);
-    //     djikstra.insertEdge("D", "A", 7);
-    //     djikstra.insertEdge("F", "G", 9);
-    //     djikstra.insertEdge("G", "L", 7);
-    //     djikstra.insertEdge("H", "B", 6);
-    //     djikstra.insertEdge("H", "I", 2);
-    //     djikstra.insertEdge("I", "H", 2);
-    //     djikstra.insertEdge("I", "D", 1);
-    //     djikstra.insertEdge("I", "L", 5);
-    //     djikstra.insertEdge("M", "E", 3);
-    //     djikstra.insertEdge("M", "F", 4);
-    //     assertEquals(17.0, djikstra.shortestPathCost("D", "I"), "The shortest path's cost was not as expected");
-    // }
+        // adding all edges between each node in the graph
+        djikstra.insertEdge("A", "B", 1);
+        djikstra.insertEdge("A", "M", 5);
+        djikstra.insertEdge("A", "H", 8);
+        djikstra.insertEdge("B", "M", 3);
+        djikstra.insertEdge("B", "E", 10);
+        djikstra.insertEdge("D", "A", 7);
+        djikstra.insertEdge("F", "G", 9);
+        djikstra.insertEdge("G", "L", 7);
+        djikstra.insertEdge("H", "B", 6);
+        djikstra.insertEdge("H", "I", 2);
+        djikstra.insertEdge("I", "H", 2);
+        djikstra.insertEdge("I", "D", 1);
+        djikstra.insertEdge("I", "L", 5);
+        djikstra.insertEdge("M", "E", 3);
+        djikstra.insertEdge("M", "F", 4);
+        assertEquals(17.0, djikstra.shortestPathCost("D", "I"), "The shortest path's cost was not as expected");
+    }
 
-    // /**
-    //  * This method tests that the shortestPathCost() method returns
-    //  * the cost of the shortest path between two nodes in the djikstra graph.
-    //  * 
-    //  */
-    // @Test
-    // public void test4() {
-    //     DijkstraGraph<String, Integer> djikstra = new DijkstraGraph<>(new PlaceholderMap<>());
+    /**
+     * This method tests that the shortestPathCost() method returns
+     * the cost of the shortest path between two nodes in the djikstra graph.
+     * 
+     */
+    @Test
+    public void test4() {
+        DijkstraGraph<String, Integer> djikstra = new DijkstraGraph<>(new PlaceholderMap<>());
 
-    //     // gary lecture example graph
-    //     // adding all the nodes in graph
-    //     djikstra.insertNode("A");
-    //     djikstra.insertNode("B");
-    //     djikstra.insertNode("D");
-    //     djikstra.insertNode("E");
-    //     djikstra.insertNode("F");
-    //     djikstra.insertNode("G");
-    //     djikstra.insertNode("H");
-    //     djikstra.insertNode("I");
-    //     djikstra.insertNode("L");
-    //     djikstra.insertNode("M");
-    //     // adding new node that has no edges to anything
-    //     djikstra.insertNode("N");
+        // gary lecture example graph
+        // adding all the nodes in graph
+        djikstra.insertNode("A");
+        djikstra.insertNode("B");
+        djikstra.insertNode("D");
+        djikstra.insertNode("E");
+        djikstra.insertNode("F");
+        djikstra.insertNode("G");
+        djikstra.insertNode("H");
+        djikstra.insertNode("I");
+        djikstra.insertNode("L");
+        djikstra.insertNode("M");
+        // adding new node that has no edges to anything
+        djikstra.insertNode("N");
 
-    //     // adding all edges between each node in the graph
-    //     djikstra.insertEdge("A", "B", 1);
-    //     djikstra.insertEdge("A", "M", 5);
-    //     djikstra.insertEdge("A", "H", 8);
-    //     djikstra.insertEdge("B", "M", 3);
-    //     djikstra.insertEdge("B", "E", 10);
-    //     djikstra.insertEdge("D", "A", 7);
-    //     djikstra.insertEdge("F", "G", 9);
-    //     djikstra.insertEdge("G", "L", 7);
-    //     djikstra.insertEdge("H", "B", 6);
-    //     djikstra.insertEdge("H", "I", 2);
-    //     djikstra.insertEdge("I", "H", 2);
-    //     djikstra.insertEdge("I", "D", 1);
-    //     djikstra.insertEdge("I", "L", 5);
-    //     djikstra.insertEdge("M", "E", 3);
-    //     djikstra.insertEdge("M", "F", 4);
+        // adding all edges between each node in the graph
+        djikstra.insertEdge("A", "B", 1);
+        djikstra.insertEdge("A", "M", 5);
+        djikstra.insertEdge("A", "H", 8);
+        djikstra.insertEdge("B", "M", 3);
+        djikstra.insertEdge("B", "E", 10);
+        djikstra.insertEdge("D", "A", 7);
+        djikstra.insertEdge("F", "G", 9);
+        djikstra.insertEdge("G", "L", 7);
+        djikstra.insertEdge("H", "B", 6);
+        djikstra.insertEdge("H", "I", 2);
+        djikstra.insertEdge("I", "H", 2);
+        djikstra.insertEdge("I", "D", 1);
+        djikstra.insertEdge("I", "L", 5);
+        djikstra.insertEdge("M", "E", 3);
+        djikstra.insertEdge("M", "F", 4);
 
-    //     // trying to find paths for edges that don't exist between N and any other node
-    //     Exception e1 = assertThrows(NoSuchElementException.class, () -> {
-    //         djikstra.shortestPathData("H", "N");
-    //     });
+        // trying to find paths for edges that don't exist between N and any other node
+        Exception e1 = assertThrows(NoSuchElementException.class, () -> {
+            djikstra.shortestPathData("H", "N");
+        });
 
-    //     assertEquals("Start or end node does not exist", e1.getMessage());
+        assertEquals("Start or end node does not exist", e1.getMessage());
 
-    //     // trying to find paths for edges that don't exist between N and any other node
-    //     Exception e2 = assertThrows(NoSuchElementException.class, () -> {
-    //         djikstra.shortestPathData("H", "N");
-    //     });
+        // trying to find paths for edges that don't exist between N and any other node
+        Exception e2 = assertThrows(NoSuchElementException.class, () -> {
+            djikstra.shortestPathData("H", "N");
+        });
 
-    //     assertEquals("Start or end node does not exist", e2.getMessage());
+        assertEquals("Start or end node does not exist", e2.getMessage());
 
-    //     // trying to find paths for edges that don't exist between N and any other node
-    //     Exception e3 = assertThrows(NoSuchElementException.class, () -> {
-    //         djikstra.shortestPathCost("H", "N");
-    //     });
+        // trying to find paths for edges that don't exist between N and any other node
+        Exception e3 = assertThrows(NoSuchElementException.class, () -> {
+            djikstra.shortestPathCost("H", "N");
+        });
 
-    //     assertEquals("Start or end node does not exist", e3.getMessage());
+        assertEquals("Start or end node does not exist", e3.getMessage());
 
-    // }
+    }
 }
